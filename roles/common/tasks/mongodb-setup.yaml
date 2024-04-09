@@ -13,7 +13,7 @@
   register: entries_count
   when: component == "catalogue"
 
-- name: get the entries count
+- name: get the user entries count
   ansible.builtin.shell: mongo --host mongodb.mydevops.online --quiet --eval 'db = db.getSiblingDB("users"); db.users.count()'
   register: entries_count
   when: component == "user"
@@ -25,7 +25,6 @@
 - name: "load catalogue data"
   ansible.builtin.shell: "mongo --host mongodb.mydevops.online < /app/schema/{{component}}.js"
   when: product_count.stdout == "0" and component == "catalogue" #keep double quots
-  when: 
 
 - name: "load user data"
   ansible.builtin.shell: "mongo --host mongodb.mydevops.online < /app/schema/{{component}}.js"
