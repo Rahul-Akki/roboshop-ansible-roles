@@ -29,4 +29,5 @@
 - name: "load user data"
   ansible.builtin.shell: "mongo --host mongodb.mydevops.online < /app/schema/{{component}}.js"
   when: users_count.stdout == "0" and component == "user" #keep double quots
+  ignore_errors: true
  
