@@ -13,6 +13,11 @@
     name: common
     tasks_from: mongodb-setup
 
+- name: Systemd
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: systemd
+
 # https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html
 # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/import_role_module.html
 
