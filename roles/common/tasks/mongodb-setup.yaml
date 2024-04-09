@@ -24,10 +24,10 @@
 
 - name: "load catalogue data"
   ansible.builtin.shell: mongo --host mongodb.mydevops.online < /app/schema/catalogue.js
-  when: products_count.stdout == "0" and component == "catalogue"
+  when: component == "catalogue" and products_count.stdout == "0"
 
 - name: "load user data"
   ansible.builtin.shell: "mongo --host mongodb.mydevops.online < /app/schema/{{component}}.js"
-  when: products_count.stdout == "0" and component == "user" #keep double quots
+  when: component == "user" andproducts_count.stdout == "0" #keep double quots
   #ignore_errors: true
  
