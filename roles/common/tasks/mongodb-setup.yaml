@@ -15,7 +15,7 @@
 
 - name: get the user entries count
   ansible.builtin.shell: mongo --host mongodb.mydevops.online --quiet --eval 'db = db.getSiblingDB("users"); db.users.count()'
-  register: entries_count
+  register: users_count
   when: component == "user"
 
 # - name: print the count
@@ -28,6 +28,6 @@
 
 - name: "load user data"
   ansible.builtin.shell: "mongo --host mongodb.mydevops.online < /app/schema/{{component}}.js"
-  when: component == "user" and users_count.stdout == "0" #keep double quots
+  when: products_count.stdout == "0" and component == "user" #keep double quots
   #ignore_errors: true
  
