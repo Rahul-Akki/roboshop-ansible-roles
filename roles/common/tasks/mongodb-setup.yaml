@@ -23,7 +23,7 @@
 #     msg: "product count: {{product_count}}"
 
 - name: "load catalogue data"
-  ansible.builtin.command: mongo --host mongodb.mydevops.online < /app/schema/catalogue.js
+  ansible.builtin.shell: mongo --host mongodb.mydevops.online < /app/schema/catalogue.js
   when: products_count.stdout == "0" and component == "catalogue"
 
 - name: "load user data"
