@@ -10,7 +10,7 @@
 
 - name: get the catalogue entries count
   ansible.builtin.command: mongo --host mongodb.mydevops.online --quiet --eval 'db = db.getSiblingDB("catalogue"); db.product.count()'
-  register: product_count
+  register: products_count
   when: component == "catalogue"
 
 - name: get the user entries count
