@@ -1,3 +1,10 @@
 MONGODB_HOST: mongodb.mydevops.online
 REDIS_HOST: redis.mydevops.online
 CATALOGUE_HOST: catalogue.mydevops.online
+SHIPPING_HOST: shipping.mydevops.online
+PAYMENT_HOST: payment.mydevops.online
+USER_HOST: user.mydevops.online
+CART_HOST: cart.mydevops.online
+DISPACH: dispach.mydevops.online
+RABBITMQ: rabbitmq.mydevops.online
+MYSQL: mysql.mydevops.online
