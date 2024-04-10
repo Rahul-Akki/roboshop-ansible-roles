@@ -5,6 +5,6 @@ SHIPPING_HOST: shipping.mydevops.online
 PAYMENT_HOST: payment.mydevops.online
 USER_HOST: user.mydevops.online
 CART_HOST: cart.mydevops.online
-DISPACH_HOST: dispach.mydevops.online
+DISPACTH_HOST: dispatch.mydevops.online
 RABBITMQ_HOST: rabbitmq.mydevops.online
 MYSQL_HOST: mysql.mydevops.online
